@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f6">
+<title>Для Анель ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#f6a8c7;--pink2:#ffe0ec;--rose:#d95788;--ink:#59384a;--cream:#fff9fb;--lav:#f0e7ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:'Comfortaa',system-ui,sans-serif;background:linear-gradient(180deg,#fff5f9 0%,#fffafd 40%,#fff1f7 100%);overflow-x:hidden}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:inherit}
+.bg-glow{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.38;animation:float 13s ease-in-out infinite}
+.blob.one{width:290px;height:290px;background:#ffd3e4;top:4%;left:-100px}
+.blob.two{width:350px;height:350px;background:#eee0ff;right:-150px;top:40%;animation-delay:-5s}
+.blob.three{width:220px;height:220px;background:#ffe7c9;left:20%;bottom:-80px;animation-delay:-8s}
+@keyframes float{50%{transform:translate(30px,-25px) scale(1.08)}}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden}
+.heart-particle{position:absolute;bottom:-35px;color:#ef8db4;animation:rise linear forwards;text-shadow:0 4px 12px #f6a8c755}
+@keyframes rise{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px clamp(16px,5vw,70px);background:#fff9f4c9;backdrop-filter:blur(14px);border-bottom:1px solid #f8dce7}
+.brand{font-weight:700;color:var(--rose);letter-spacing:.02em}.brand span{font-size:1.25rem}
+.nav-actions{display:flex;gap:9px;align-items:center}
+.pill{border:1px solid #f2c3d5;background:#fff;color:var(--rose);padding:10px 14px;border-radius:999px;transition:.25s}
+.pill:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px #d9578825}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:70px 20px 85px;position:relative}
+.hero-inner{max-width:850px;animation:appear .9s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #f5c8d9;border-radius:99px;background:#fff9fc;padding:9px 15px;font-size:.78rem;color:#bd5a83;letter-spacing:.06em;text-transform:uppercase}
+.hero-heart{font-size:clamp(5rem,14vw,9rem);line-height:1.2;display:block;filter:drop-shadow(0 12px 22px #e98fb555);animation:heartbeat 2.3s ease-in-out infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}8%{transform:scale(1.08)}16%{transform:scale(1)}24%{transform:scale(1.05)}32%{transform:scale(1)}}
+h1{font-size:clamp(2.4rem,8vw,5.5rem);line-height:1.08;margin:14px 0;color:#a83e6b;letter-spacing:-.05em}
+.script{font-family:'Marck Script',cursive;font-weight:400;color:#d95788}
+.hero p{max-width:600px;margin:18px auto 28px;font-size:clamp(1rem,2.4vw,1.15rem);line-height:1.8;color:#805a6d}
+.btn{border:0;border-radius:999px;padding:15px 23px;background:linear-gradient(135deg,#f3a0c0,#df6f9d);color:white;box-shadow:0 8px 20px #d9578833;transition:.25s;font-weight:700}
+.btn.secondary{background:#fff;color:#bf5c85;border:1px solid #f1bfd2;box-shadow:none}
+.btn.small{padding:11px 16px;font-size:.88rem}
+.scroll-hint{position:absolute;bottom:20px;color:#c487a1;font-size:.8rem;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+section{padding:78px 20px;scroll-margin-top:65px}
+.container{max-width:1040px;margin:auto}
+.section-head{text-align:center;margin-bottom:34px}
+.kicker{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:#c27495;font-weight:700}
+h2{font-size:clamp(1.8rem,5vw,3rem);margin:10px 0;color:#a83e6b;letter-spacing:-.04em}
+.section-head p{color:#946b7d;line-height:1.7;max-width:620px;margin:0 auto}
+.card{background:#ffffffc9;border:1px solid #f7d9e5;border-radius:28px;box-shadow:0 14px 45px #c45c8210}
+.letter-card{max-width:780px;margin:auto;padding:clamp(24px,5vw,50px);position:relative;overflow:hidden}
+.letter-card:after{content:'♡';position:absolute;font-size:12rem;color:#ffe6ef;right:-15px;bottom:-80px;z-index:0;transform:rotate(-15deg)}
+.letter-content{position:relative;z-index:1}
+.letter-content p{line-height:1.95;color:#795365}
+.letter-content .salute{font-family:'Marck Script',cursive;font-size:2.3rem;color:#c64f80;margin:0 0 12px}
+.sign{font-family:'Marck Script',cursive;font-size:2rem;text-align:right;color:#c64f80;margin-top:20px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.compliment{min-height:180px;padding:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;transition:.3s;position:relative;overflow:hidden}
+.compliment:hover{transform:translateY(-5px) rotate(-.5deg)}
+.compliment .emoji{font-size:2.1rem}
+.compliment .front{font-weight:700;color:#b34f79}
+.compliment .inside{display:none;line-height:1.65;font-size:.95rem;color:#80596c}
+.compliment.open .front{display:none}.compliment.open .inside{display:block;animation:appear .35s ease}
+.compliment.open{background:linear-gradient(145deg,#fff,#fff0f6);border-color:#eea8c4}
+
+/* ОБНОВЛЕННАЯ ГАЛЕРЕЯ */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery-item{border-radius:20px;overflow:hidden;cursor:pointer;position:relative;aspect-ratio:4/3;border:1px solid #f7d9e5;box-shadow:0 10px 30px #c45c8210;transition:.3s ease}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s ease}
+.gallery-item:hover{transform:translateY(-5px);box-shadow:0 15px 35px #d9578833}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-item .overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,#591d31aa);display:flex;align-items:flex-end;padding:15px;opacity:0;transition:.3s}
+.gallery-item:hover .overlay{opacity:1}
+.gallery-item .overlay span{color:#fff;font-size:.85rem;font-weight:700;letter-spacing:.05em}
+
+/* ЛАЙТБОКС */
+.lightbox{position:fixed;inset:0;background:#2a121ecc;backdrop-filter:blur(10px);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.show{display:flex;animation:appear .3s ease}
+.lightbox-content{background:#fff9fb;border:1px solid #f5c7d8;border-radius:28px;max-width:850px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 25px 80px #00000055;animation:zoomIn .3s ease}
+@keyframes zoomIn{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
+.lightbox-img{width:100%;max-height:55vh;object-fit:contain;background:#1a1a1a;border-radius:28px 28px 0 0}
+.lightbox-text{padding:clamp(20px,4vw,35px)}
+.lightbox-date{display:inline-block;background:#ffe0ec;color:#b34f79;padding:6px 12px;border-radius:99px;font-size:.8rem;font-weight:700;margin-bottom:12px;letter-spacing:.05em}
+.lightbox-desc{line-height:1.8;color:#59384a;font-size:clamp(.95rem,2vw,1.05rem);margin:0}
+.lightbox-close{position:absolute;top:15px;right:15px;background:#ffffffdd;border:0;width:40px;height:40px;border-radius:50%;color:#b44575;font-size:1.2rem;display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 12px #00000022;transition:.2s;z-index:2}
+.lightbox-close:hover{background:#fff;transform:scale(1.1)}
+
+.game-card{padding:clamp(20px,4vw,38px);text-align:center}
+.game-stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:16px 0 20px}
+.stat{background:#fff1f7;border:1px solid #f6ccdc;padding:10px 14px;border-radius:14px;font-size:.88rem}
+.heart-field{height:250px;position:relative;background:radial-gradient(circle at 50% 50%,#fff 0%,#fff2f8 75%);border:1px solid #f5d6e3;border-radius:22px;overflow:hidden;margin:18px 0}
+.catch-heart{position:absolute;border:0;background:transparent;font-size:2rem;padding:0;animation:heartpop .5s ease both;filter:drop-shadow(0 4px 5px #e66c9d35)}
+@keyframes heartpop{from{transform:scale(0)}to{transform:scale(1)}}
+.game-message{min-height:28px;color:#b34f79;font-weight:700}
+.final-card{max-width:800px;margin:auto;padding:clamp(24px,5vw,50px);text-align:center;position:relative;overflow:hidden}
+.final-card .big{font-size:clamp(3rem,10vw,6rem);display:block;animation:heartbeat 2.3s infinite}
+.final-hidden{display:none}
+.final-hidden.show{display:block;animation:appear .8s ease}
+.final-hidden h3{font-size:clamp(1.8rem,5vw,3rem);color:#b44575}
+.final-hidden p{line-height:1.8;color:#80596c}
+footer{text-align:center;padding:30px 20px 45px;color:#b37b94;font-size:.8rem}
+.modal{position:fixed;inset:0;background:#48253799;backdrop-filter:blur(8px);z-index:30;display:none;align-items:center;justify-content:center;padding:18px}
+.modal.show{display:flex;animation:appear .25s ease}
+.modal-box{background:#fff8fb;border:1px solid #f5c7d8;border-radius:28px;max-width:480px;width:100%;padding:30px;text-align:center;box-shadow:0 20px 70px #53233b55}
+.modal-box h3{color:#b44575;font-size:1.8rem;margin-top:0}
+.modal-box p{line-height:1.7;color:#80596c}
+.close{float:right;border:0;background:#ffe7f0;border-radius:50%;width:34px;height:34px;color:#b44575}
+.confetti{position:fixed;top:-15px;width:9px;height:14px;z-index:50;animation:confettiFall 3.5s linear forwards;pointer-events:none}
+@keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:.7}}
+@media(max-width:720px){.grid,.gallery-grid{grid-template-columns:1fr 1fr}.hero{min-height:83vh}.nav-actions .nav-text{display:none}section{padding:62px 16px}.lightbox-img{max-height:45vh}}
+@media(max-width:460px){.grid,.gallery-grid{grid-template-columns:1fr}.compliment{min-height:145px}.pill{padding:9px 11px}.brand{font-size:.9rem}.heart-field{height:220px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bg-glow"><div class="blob one"></div><div class="blob two"></div><div class="blob three"></div></div>
+<div id="particles" aria-hidden="true"></div>
+<nav>
+  <div class="brand"><span>♡</span> маленький мир Анель</div>
+  <div class="nav-actions">
+    <button class="pill" id="musicBtn" aria-pressed="false">♫ <span class="nav-text">Включить музыку</span></button>
+    <button class="pill" onclick="document.querySelector('#final').scrollIntoView({behavior:'smooth'})">Секрет ✨</button>
+  </div>
+</nav>
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow">✧ специально для тебя ✧</div>
+    <span class="hero-heart" aria-hidden="true">💗</span>
+    <h1>С днём рождения,<br><span class="script">Анель!</span></h1>
+    <p>Сегодня весь мир будто стал чуточку нежнее - ведь это твой день. Я приготовил для тебя маленькое приключение. Не спеши, нажимай на всё, что тебе интересно ♡</p>
+    <button class="btn" onclick="document.querySelector('#letter').scrollIntoView({behavior:'smooth'})">Начать наше приключение <span>→</span></button>
+  </div>
+  <div class="scroll-hint">листай вниз, там кое-что есть ♡</div>
+</header>
+
+<section id="letter">
+  <div class="container">
+    <div class="section-head"><div class="kicker">глава первая · от сердца</div><h2>Письмо для тебя 💌</h2><p>Я хотел, чтобы у тебя осталось не только поздравление, но и что-то тёплое, к чему можно вернуться.</p></div>
+    <article class="card letter-card"><div class="letter-content">
+      <p class="salute">Моя дорогая Анель,</p>
+      <p>С днём рождения, солнышко! ❤️ Я хочу, чтобы в твоей жизни было как можно больше поводов улыбаться, чтобы рядом всегда были люди, с которыми тебе спокойно и хорошо, а мечты постепенно становились реальностью.</p>
+      <p>Я безумно счастлив что ты появилась в моей жизни, ты словно лучик солнца среди грозы и смога. Мы с тобой прошли столько трудностей, и мы уже стали с тобой по-настоящему близкими людьми.</p>
+      <p>Я соорудил этот сайт в честь тебя, чтобы ты могла посещать его в любой день. Я надеюсь что ты проведешь этот по-настоящему особенный день в кругу людей которые тебя любят и ценят. 🌷</p>
+      <p>А дальше спрятано ещё несколько маленьких сюрпризов. Обязательно всё потыкай — я постарался. ☺️</p>
+      <div class="sign">Обнимаю, твой человек ♡</div>
+    </div></article>
+  </div>
+</section>
+
+<section id="compliments">
+  <div class="container">
+    <div class="section-head"><div class="kicker">глава вторая · секретики</div><h2>Открывай по одному 💞</h2><p>Каждая карточка хранит маленькое напоминание о том, какая ты замечательная.</p></div>
+    <div class="grid" id="complimentGrid">
+      <button class="card compliment" aria-expanded="false"><span class="emoji">🌷</span><span class="front">Нажми, если готова</span><span class="inside">Твоя улыбка умеет делать даже обычный день особенным.</span></button>
+      <button class="card compliment" aria-expanded="false"><span class="emoji">✨</span><span class="front">Здесь кое-что есть</span><span class="inside">В тебе есть своя искра - её невозможно спутать ни с чьей другой.</span></button>
+      <button class="card compliment" aria-expanded="false"><span class="emoji">🧸</span><span class="front">Маленький секрет</span><span class="inside">Мне хочется, чтобы рядом со мной ты могла быть собой и чувствовать себя комфортно.</span></button>
+      <button class="card compliment" aria-expanded="false"><span class="emoji">🎀</span><span class="front">Ещё один комплимент</span><span class="inside">У тебя получается быть красивой не только внешне, но и в мелочах - в словах, поступках и заботе.</span></button>
+      <button class="card compliment" aria-expanded="false"><span class="emoji">☁️</span><span class="front">Открой меня ♡</span><span class="inside">Ты заслуживаешь доброты, спокойствия, уважения и огромного количества счастливых моментов.</span></button>
+      <button class="card compliment" aria-expanded="false"><span class="emoji">💌</span><span class="front">Последняя? Не-а</span><span class="inside">Я рад, что мы познакомились. И мне хочется связать с тобой всю свою жизнь.</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ОБНОВЛЕННЫЙ РАЗДЕЛ ГАЛЕРЕИ -->
+<section id="memories">
+  <div class="container">
+    <div class="section-head"><div class="kicker">глава третья · наши моменты</div><h2>Маленькая галерея 📸</h2><p>Наша история в фотографиях. Нажми на любую из них, чтобы вспомнить этот момент.</p></div>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Фото будут добавлены через JS -->
+    </div>
+  </div>
+</section>
+
+<section id="game">
+  <div class="container">
+    <div class="section-head"><div class="kicker">глава четвёртая · мини-квест</div><h2>Поймай сердечки! 💖</h2><p>У тебя есть 15 секунд, чтобы собрать 10 сердечек. Нажимай на них, пока они не исчезли!</p></div>
+    <div class="card game-card">
+      <div class="game-stats"><div class="stat">💗 Собрано: <b id="score">0</b>/10</div><div class="stat">⏳ Время: <b id="time">15</b> сек.</div></div>
+      <div class="heart-field" id="heartField"><div style="position:absolute;inset:0;display:grid;place-items:center;color:#c78aa4;font-size:.9rem;padding:20px">Нажми «Начать игру» и лови сердечки ✨</div></div>
+      <p class="game-message" id="gameMessage">Я верю в тебя, Анелька!</p>
+      <button class="btn" id="startGame">Начать игру ♡</button>
+    </div>
+  </div>
+</section>
+
+<section id="final">
+  <div class="container">
+    <div class="section-head"><div class="kicker">последняя глава · только для тебя</div><h2>Кажется, остался один секрет… 🎁</h2><p>Ты уже открыла карточки и прошла квест. Теперь самое время открыть финальный сюрприз.</p></div>
+    <div class="card final-card">
+      <span class="big">🎁</span>
+      <p>Готова открыть последний подарок?</p>
+      <button class="btn" id="revealBtn">Открыть мой сюрприз ✨</button>
+      <div class="final-hidden" id="finalMessage">
+        <span class="big">💖</span>
+        <h3>Ты — моё маленькое чудо, Анель!</h3>
+        <p>Пусть этот новый год твоей жизни будет полон ярких впечатлений, смеха, нежности и моментов, которые захочется вспоминать снова и снова.</p>
+        <p>И это ещё не всё: <strong>зайди пожалуйста на кухню, там кое что тебя ждет.</strong> Сегодня я хочу сделать тебя счастливее, пусть даже одним маленьким сюрпризом. С днём рождения, моя хорошая! 🌷</p>
+        <button class="btn secondary small" id="againBtn">Ещё сердечек! ♡</button>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>Сделано с теплом специально для тебя ♡<br><span style="display:inline-block;margin-top:8px">Сохрани этот день в памяти - и побольше улыбайся.</span></footer>
+
+<!-- Модалка для лайтбокса галереи -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="closeLightbox" aria-label="Закрыть">×</button>
+    <img src="" alt="Наше фото" class="lightbox-img" id="lightboxImg">
+    <div class="lightbox-text">
+      <div class="lightbox-date" id="lightboxDate"></div>
+      <p class="lightbox-desc" id="lightboxDesc"></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box"><button class="close" id="closeModal" aria-label="Закрыть">×</button><div style="font-size:2.8rem">🌸</div><h3 id="modalTitle">Ты справилась!</h3><p id="modalText">Каждое сердечко — маленькое пожелание для тебя.</p><button class="btn small" id="modalOk">Ура! ♡</button></div>
+</div>
+<script>
+const $ = (s) => document.querySelector(s);
+const particles = $('#particles');
+function floatHeart(){
+  const el=document.createElement('span');el.className='heart-particle';el.textContent=['♡','♥','✧','💗'][Math.floor(Math.random()*4)];
+  el.style.left=Math.random()*100+'%';el.style.fontSize=(12+Math.random()*20)+'px';el.style.animationDuration=(7+Math.random()*8)+'s';el.style.opacity=(.3+Math.random()*.55);
+  particles.appendChild(el);setTimeout(()=>el.remove(),16000);
+}
+setInterval(floatHeart,850);
+$('#complimentGrid').querySelectorAll('.compliment').forEach(card=>{
+  card.addEventListener('click',()=>{const opened=card.classList.toggle('open');card.setAttribute('aria-expanded',String(opened));if(opened)popHearts(3)});
+});
+
+// ДАННЫЕ ДЛЯ ГАЛЕРЕИ
+const galleryData = [
+  { img: 'images/1.jpg', date: '13.07.2025', text: 'Наша первая совместная фотография и начало нашей тёплой истории любви. Помнишь, как мы ждали концерт Сэймо? Поднялся сильный ветер, мы оба замёрзли, но, обнявшись, согревали друг друга) ❤️ еще папа стоял рядом смотрел я капец боялся ну' },
+  { img: 'images/2.jpg', date: '19.07.2025', text: 'А это наше свидание) на нем мы впервые вместе прокатились на колесе обозрения. Был теплый летний вечер, мир будто сверкал красками и хорошим настроением) а еще это тот день когда мы впервые вместе сидели во дворе до поздна. Папа еще был скептически мнения обо мне и о мальчиках, поэтому нам нада было бежать слом голову домой чтобы не ругались где мы там шарохаемся. а жаль, тогда вечер чувствовался по особенному' },
+  { img: 'images/3.jpg', date: '02.08.2025', text: 'О, а тут мы скатались впервые на озеро) было ужасно холодно, я бы сказал ебать как холодно, но мы все таки искупались. было очень весело, было ощущение что мы два американских подростка которые выбрались на нашем пикапе не далеко от границы Нью Джерси искупаться пока не видят родители. а после грелись в машине. и всеее это время Ерока просил с ним поиграть. с начала с папой, потом с мамой, потом уже с нами. честно я уже устал играть' },
+  { img: 'images/4.jpg', date: '06.09.2026', text: 'ООоо а помнишь как мы играли в 99, олень этот тупой постоянно бегал за нами. так мы проводили вечера, не смотря на расстояние и свои заботы в лице учебы и работы, мы находили время для друг друга)' },
+  { img: 'images/5.jpg', date: '28.12.2025', text: 'А это наша первая совместная зима. Мы еще в тот день катались на коньках, помнишь? тут мы встретили наш первый снег, первые морозы и наш первый новый год. тогда я понял, что все мои желания на Новый год, что все падающие звезды, все мечты, исполнились благодаря тебе))' },
+  { img: 'images/6.jpg', date: '23.04.2026', text: 'Почти каждый день, мы проводили вместе на работе, играли в игрушки смотрели вижосики, сплетничали хпхпххп. а после шли домой, вместе под ручку. а кста там мне и кудри сделали, спасибо тебе еще раз больше))' },
+  { img: 'images/7.jpg', date: '17.05.2026', text: 'А тут ты приехала на выходные в Тюмень, и мы впервые сходили вместе в клуб. это было круто, мы классно провели вместе время жоска денсив под песенки) хоть я и не любитель таких мест))' },
+  { img: 'images/8.jpg', date: '18.05.2026', text: 'Дни были теплые и насыщенные, и глазом моргнуть не успел как тебе уже пора было домой' },
+  { img: 'images/9.jpg', date: '13.07.2026', text: 'А это наш юбилей, первый год проведенный вместе. Ты тогда была (как и всегда) невероятно красива, мы провели прекрасный день. И я уверен, что это далеко не последний наш год вместе))' },
+  { img: 'images/10.jpg', date: 'Навсегда', text: 'И спустя все то что мы прошли с тобой, расстояние, проблемы, недопонимания, мы все равно остались вместе, я тебя люблю мое солнышко!!❤️❤️❤️' }
+];
+
+// РЕНДЕР ГАЛЕРЕИ
+const galleryGrid = $('#galleryGrid');
+galleryData.forEach((item) => {
+  const el = document.createElement('div');
+  el.className = 'gallery-item';
+  el.innerHTML = `
+    <img src="${item.img}" alt="Фото ${item.date}" loading="lazy">
+    <div class="overlay"><span>${item.date}</span></div>
+  `;
+  el.addEventListener('click', () => openLightbox(item));
+  galleryGrid.appendChild(el);
+});
+
+// ЛОГИКА ЛАЙТБОКСА
+const lightbox = $('#lightbox');
+const lightboxImg = $('#lightboxImg');
+const lightboxDate = $('#lightboxDate');
+const lightboxDesc = $('#lightboxDesc');
+const closeLightboxBtn = $('#closeLightbox');
+
+function openLightbox(item) {
+  lightboxImg.src = item.img;
+  lightboxDate.textContent = item.date;
+  lightboxDesc.textContent = item.text;
+  lightbox.classList.add('show');
+  document.body.style.overflow = 'hidden'; // Блокируем скролл фона
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+closeLightboxBtn.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+// ОСТАЛЬНОЙ ФУНКЦИОНАЛ
+function popHearts(n=20){
+  for(let i=0;i<n;i++){const el=document.createElement('span');el.className='confetti';el.textContent=['💗','💖','♡','✦','🌸'][Math.floor(Math.random()*5)];el.style.left=Math.random()*100+'%';el.style.fontSize=(12+Math.random()*18)+'px';el.style.animationDelay=(Math.random()*.7)+'s';el.style.animationDuration=(2.3+Math.random()*2)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),5000)}
+}
+let score=0,timeLeft=15,gameTimer=null,spawnTimer=null,playing=false;
+function clearGame(){clearInterval(gameTimer);clearInterval(spawnTimer);$('#heartField').innerHTML='';}
+function spawnCatchHeart(){
+  if(!playing)return;const field=$('#heartField');const h=document.createElement('button');h.className='catch-heart';h.textContent=['💗','💖','💕','💘'][Math.floor(Math.random()*4)];h.setAttribute('aria-label','Поймать сердечко');
+  const maxX=Math.max(0,field.clientWidth-48),maxY=Math.max(0,field.clientHeight-50);h.style.left=Math.random()*maxX+'px';h.style.top=Math.random()*maxY+'px';
+  h.addEventListener('click',()=>{if(!playing)return;score++;$('#score').textContent=score;h.remove();if(score>=10)finishGame(true)});
+  field.appendChild(h);setTimeout(()=>h.remove(),1300);
+}
+function startGame(){
+  clearGame();score=0;timeLeft=15;playing=true;$('#score').textContent=score;$('#time').textContent=timeLeft;$('#gameMessage').textContent='Лови их, Анель! 💞';$('#startGame').textContent='Игра идёт…';$('#startGame').disabled=true;
+  spawnTimer=setInterval(spawnCatchHeart,520);spawnCatchHeart();
+  gameTimer=setInterval(()=>{timeLeft--;$('#time').textContent=timeLeft;if(timeLeft<=0)finishGame(score>=10)},1000);
+}
+function finishGame(won){
+  if(!playing)return;playing=false;clearInterval(gameTimer);clearInterval(spawnTimer);$('#heartField').querySelectorAll('.catch-heart').forEach(h=>h.remove());$('#startGame').disabled=false;$('#startGame').textContent='Сыграть ещё раз ↻';
+  $('#gameMessage').textContent=won?'Ты собрала все сердечки! Какая умничка! 🎉':`Ты собрала ${score} из 10 — давай попробуем ещё раз! 💗`;
+  if(won){popHearts(45);showModal('Ура, победа! 💖','Ты поймала все сердечки! Пусть в жизни у тебя будет ещё больше поводов для улыбок.');}
+}
+$('#startGame').addEventListener('click',startGame);
+function showModal(title,txt){$('#modalTitle').textContent=title;$('#modalText').textContent=txt;$('#modal').classList.add('show')}
+function closeModal(){$('#modal').classList.remove('show')}
+$('#closeModal').addEventListener('click',closeModal);$('#modalOk').addEventListener('click',closeModal);
+$('#modal').addEventListener('click',e=>{if(e.target===$('#modal'))closeModal()});
+$('#revealBtn').addEventListener('click',()=>{$('#finalMessage').classList.add('show');$('#revealBtn').textContent='Сюрприз открыт 💗';$('#revealBtn').disabled=true;popHearts(65);setTimeout(()=>$('#finalMessage').scrollIntoView({behavior:'smooth',block:'center'}),100)});
+$('#againBtn').addEventListener('click',()=>{popHearts(60);showModal('Ещё одна порция любви 💞','Это напоминание для тебя: ты важна, ты достойна хорошего, и сегодня можно радоваться просто так!')});
+
+let audioCtx=null,master=null,musicOn=false,melodyTimer=null,noteIndex=0;
+const melody=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46,523.25,659.25,783.99,1046.5,880,783.99,659.25,587.33];
+function playNote(freq,duration=.34){
+  if(!audioCtx||!master)return;const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(.0001,audioCtx.currentTime);gain.gain.exponentialRampToValueAtTime(.055,audioCtx.currentTime+.04);gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+duration);osc.connect(gain);gain.connect(master);osc.start();osc.stop(audioCtx.currentTime+duration+.03);
+}
+async function toggleMusic(){
+  if(!musicOn){
+    const AC=window.AudioContext||window.webkitAudioContext;if(!AC){showModal('Музыка недоступна','В этом браузере не поддерживается воспроизведение синтезированной мелодии.');return}
+    audioCtx=audioCtx||new AC();await audioCtx.resume();master=audioCtx.createGain();master.gain.value=.65;master.connect(audioCtx.destination);musicOn=true;
+    $('#musicBtn').innerHTML='♫ <span class="nav-text">Выключить музыку</span>';$('#musicBtn').setAttribute('aria-pressed','true');
+    noteIndex=0;playNote(melody[noteIndex++]);melodyTimer=setInterval(()=>{if(!musicOn)return;playNote(melody[noteIndex%melody.length]);if(noteIndex%4===0)playNote(melody[(noteIndex+4)%melody.length]/2,.55);noteIndex++},380);
+  }else{musicOn=false;clearInterval(melodyTimer);if(master)master.gain.setTargetAtTime(.0001,audioCtx.currentTime,.08);$('#musicBtn').innerHTML='♫ <span class="nav-text">Включить музыку</span>';$('#musicBtn').setAttribute('aria-pressed','false')}
+}
+$('#musicBtn').addEventListener('click',toggleMusic);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+</script>
+</body>
+</html>
